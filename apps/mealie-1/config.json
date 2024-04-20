@@ -6,7 +6,7 @@
   "exposable": true,
   "id": "mealie-1",
   "tipi_version": 1,
-  "version": "v1.0.0-RC2",
+  "version": "v1.5.1",
   "description": "Mealie is a self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and Mealie will automatically import the relevant data or add a family recipe with the UI editor. Mealie also provides an API for interactions from 3rd party applications. Default username / password is changeme@email.com / MyPassword",
   "short_desc": "Mealie is a self-hosted recipe manager and meal planner.",
   "author": "hay-kot",
@@ -17,6 +17,38 @@
       "type": "boolean",
       "label": "Allow user registration",
       "env_variable": "MEALIE_ALLOW_SIGNUP"
+    },
+    {
+      "env_variable": "EMAIL_FROM",
+      "label": "Configures the global From: header whilst sending emails.",
+      "type": "email",
+      "min": 1,
+      "max": 1024,
+      "required": false
+    },
+    {
+      "env_variable": "EMAIL_SERVER_USER",
+      "label": "Email server username (SMTP)",
+      "type": "email",
+      "min": 1,
+      "max": 1024,
+      "required": false
+    },
+    {
+      "env_variable": "EMAIL_SERVER_HOST",
+      "label": "Email server host (SMTP)",
+      "type": "fqdn",
+      "min": 1,
+      "max": 1024,
+      "required": false
+    },
+    {
+      "env_variable": "EMAIL_SERVER_PASSWORD",
+      "label": "Email server password (SMTP)",
+      "type": "password",
+      "min": 1,
+      "max": 1024,
+      "required": false
     }
   ],
   "supported_architectures": ["arm64", "amd64"]
